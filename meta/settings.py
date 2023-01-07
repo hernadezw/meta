@@ -87,27 +87,30 @@ WSGI_APPLICATION = 'meta.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-DATABASES = {    
-    'default': {                
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'metaluna',
-        'USER': 'metaluna_user',
-        'PASSWORD': 'NiURvyS6T5O9I0YLbIe8eSV4hP0uoGsC',
-        'HOST': 'dpg-cer6gk6n6mpr60bh2qv0-a',
-        'DATABASE_PORT': '5432'
-    }
+# DATABASES = {    
+#     'default': {                
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         #'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': 'metaluna',
+#         'USER': 'metaluna_user',
+#         'PASSWORD': 'NiURvyS6T5O9I0YLbIe8eSV4hP0uoGsC',
+#         'HOSTNAME': 'dpg-cer6gk6n6mpr60bh2qv0-a',
+#         'DATABASE_PORT': '5432',
+#     }
 
+# }
+
+DATABASES = {
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600
+    )
 }
 
 # DATABASES = {
-#     'default': dj_database_url.config(
-#         # Feel free to alter this value to suit your needs.
-#         default='sqlite:///db.sqlite3',
-#         conn_max_age=600
-#     )
+#     'default': dj_database_url.config()
 # }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
