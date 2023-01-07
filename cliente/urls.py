@@ -3,7 +3,7 @@ from .api import CLienteViewSet, TipoClienteViewSet, MunicipioViewSet, Departame
 
 router=routers.DefaultRouter()
 
-router.register('api/cliente', CLienteViewSet, 'cliente-api')
+router.register('api/cliente', CLienteViewSet, 'cliente-api') 
 router.register('api/tipocliente', TipoClienteViewSet, 'tipocliente-api')
 router.register('api/municipio', MunicipioViewSet, 'municipio-api')
 router.register('api/departamento', DepartamentoViewSet, 'depatamento-api')
