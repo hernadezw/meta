@@ -15,7 +15,7 @@ class TipoClienteSerializer(serializers.ModelSerializer):
 
 class DepartamentoSerializer(serializers.ModelSerializer):
     class Meta: 
-        model:Departamento
+        model=Departamento
         fields=('__all__')
         read_only_fields = ('create',)
         

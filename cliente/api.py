@@ -26,5 +26,5 @@ class MunicipioViewSet(viewsets.ModelViewSet):
 class DireccionViewSet(viewsets.ModelViewSet):
     queryset=Direccion.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class=DepartamentoSerializer
+    serializer_class=DireccionSerializer
     
