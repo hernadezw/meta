@@ -4,7 +4,8 @@ from .models import Cliente, TipoCliente, Departamento, Municipio, Direccion
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta: 
         model=Cliente
-        fields=('__all__')
+        #fields=('__all__')
+        exclude=('id', )
         read_only_fields = ('create',)
         
 class TipoClienteSerializer(serializers.ModelSerializer):
