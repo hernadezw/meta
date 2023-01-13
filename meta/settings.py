@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'meta.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(
+    'default': dj_database_url.config( #nueva bd
         # Feel free to alter this value to suit your needs.
         default='sqlite:///db.sqlite3',
         conn_max_age=600
